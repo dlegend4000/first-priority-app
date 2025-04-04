@@ -56,16 +56,58 @@ const Booking = () => {
 };
 
 const Info = () => (
-  <div className="p-4 max-w-2xl mx-auto">
-    <h1 className="text-2xl font-bold mb-4">About First Priority</h1>
-    <p className="mb-2">First Priority gives you premium assistance at Nigerian airports, including:</p>
-    <ul className="list-disc pl-5 space-y-1">
-      <li>Fast-track check-in and immigration</li>
-      <li>Baggage handling and escort service</li>
-      <li>Meet and greet by a professional on arrival</li>
-      <li>Priority boarding and transfers</li>
-      <li>Confirmation via WhatsApp and payment through WhatsApp</li>
-    </ul>
+  <div className="p-6 w-full space-y-14">
+    <img src="/lagos-airport-image.jpg" alt="First Priority Header" className="w-full rounded-2xl shadow-lg object-cover max-h-[450px]" />
+
+    <section className="grid md:grid-cols-2 gap-6 items-start">
+      <div>
+        <h2 className="text-2xl font-semibold mb-2">Fast-track Check-in and Immigration</h2>
+        <p className="text-gray-700">
+          Avoid long queues with our exclusive fast-track access through check-in counters and immigration control. Our agents guide you quickly through all necessary formalities.
+        </p>
+      </div>
+      <img src="/checkin-service.png" alt="Check-in Service" className="rounded-xl shadow w-full max-h-72 object-cover" />
+    </section>
+
+    <section className="grid md:grid-cols-2 gap-6 items-start">
+      <img src="/escort-service.jpg" alt="Escort Service" className="rounded-xl shadow w-full max-h-72 object-cover" />
+      <div>
+        <h2 className="text-2xl font-semibold mb-2">Baggage Handling and Escort Service</h2>
+        <p className="text-gray-700">
+          Our staff assist with your luggage from arrival gate to baggage claim and escort you through the airport for a stress-free experience.
+        </p>
+      </div>
+    </section>
+
+    <section className="grid md:grid-cols-2 gap-6 items-start">
+      <div>
+        <h2 className="text-2xl font-semibold mb-2">Meet and Greet</h2>
+        <p className="text-gray-700">
+          A professional greeter awaits you on arrival with a personalized sign, ready to help you navigate the airport with ease.
+        </p>
+      </div>
+      <img src="/meet-greet.jpg" alt="Meet and Greet" className="rounded-xl shadow w-full max-h-72 object-cover" />
+    </section>
+
+    <section className="grid md:grid-cols-2 gap-6 items-start">
+      <img src="/priority-boarding.jpg" alt="Priority Boarding" className="rounded-xl shadow w-full max-h-72 object-cover" />
+      <div>
+        <h2 className="text-2xl font-semibold mb-2">Priority Boarding and Transfers</h2>
+        <p className="text-gray-700">
+          Skip the line with priority boarding options. We also assist with domestic transfers and flight changes if needed.
+        </p>
+      </div>
+    </section>
+
+    <section className="grid md:grid-cols-2 gap-6 items-start">
+      <div>
+        <h2 className="text-2xl font-semibold mb-2">WhatsApp Confirmation and Support</h2>
+        <p className="text-gray-700">
+          Once booked, our team will confirm your service and coordinate payment via WhatsApp — ensuring real-time updates and support.
+        </p>
+      </div>
+      <img src="/whatsapp-support.jpg" alt="WhatsApp Support" className="rounded-xl shadow w-full max-h-72 object-cover" />
+    </section>
   </div>
 );
 
