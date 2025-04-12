@@ -33,24 +33,33 @@ const Booking = () => {
   };
 
   return (
-    <div className="p-4 max-w-xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4">Book First Priority Service</h1>
-      {submitted ? (
-        <div className="text-green-600">
-          Thank you! You will be contacted on WhatsApp for confirmation and payment.
-        </div>
-      ) : (
-        <form onSubmit={handleSubmit} className="grid gap-4">
-          <input className="p-2 border rounded" name="name" placeholder="Full Name" onChange={handleChange} required />
-          <input className="p-2 border rounded" name="phone" placeholder="Phone Number" onChange={handleChange} required />
-          <input className="p-2 border rounded" name="email" placeholder="Email Address" type="email" onChange={handleChange} required />
-          <input className="p-2 border rounded" name="flightNumber" placeholder="Flight Number" onChange={handleChange} required />
-          <input className="p-2 border rounded" name="airline" placeholder="Airline" onChange={handleChange} required />
-          <input className="p-2 border rounded" name="arrivalTime" placeholder="Arrival Date & Time" type="datetime-local" onChange={handleChange} required />
-          <input className="p-2 border rounded" name="airport" placeholder="Airport (e.g., Lagos)" onChange={handleChange} required />
-          <button className="bg-blue-600 text-white py-2 px-4 rounded" type="submit">Submit</button>
-        </form>
-      )}
+    <div className="relative min-h-screen bg-cover bg-center flex flex-col md:flex-row items-center justify-between px-6 py-12" style={{ backgroundImage: "url('carplane.jpg')" }}>
+      <div className="text-white max-w-xl md:text-left text-center mb-10 md:mb-0">
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight">Introducing VIP Airport Services</h1>
+        <p className="text-lg mt-4 font-light">Skip the hassle. Enjoy personal assistance every step of the way.</p>
+      </div>
+
+      <div className="bg-white bg-opacity-90 p-6 rounded-2xl shadow-xl w-full max-w-xl">
+        <h1 className="text-xl font-semibold mb-4 text-gray-800">Book First Priority Service</h1>
+        {submitted ? (
+          <div className="text-green-600">
+            Thank you! You will be contacted on WhatsApp for confirmation and payment.
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="grid gap-4">
+            <input className="p-3 border rounded-md" name="name" placeholder="Full Name" onChange={handleChange} required />
+            <input className="p-3 border rounded-md" name="phone" placeholder="Phone Number" onChange={handleChange} required />
+            <input className="p-3 border rounded-md" name="email" placeholder="Email Address" type="email" onChange={handleChange} required />
+            <input className="p-3 border rounded-md" name="flightNumber" placeholder="Flight Number" onChange={handleChange} required />
+            <input className="p-3 border rounded-md" name="airline" placeholder="Airline" onChange={handleChange} required />
+            <input className="p-3 border rounded-md" name="arrivalTime" placeholder="Arrival Date & Time" type="datetime-local" onChange={handleChange} required />
+            <input className="p-3 border rounded-md" name="airport" placeholder="Airport (e.g., Lagos)" onChange={handleChange} required />
+            <button className="bg-black text-white py-3 px-6 rounded-md hover:bg-gray-800 transition" type="submit">
+              Submit Booking
+            </button>
+          </form>
+        )}
+      </div>
     </div>
   );
 };
@@ -111,29 +120,39 @@ const Info = () => (
   </div>
 );
 
-const BureauDeChange = () => {
-  const [rates, setRates] = useState(null);
-
-  useEffect(() => {
-    fetch("https://api.exchangerate-api.com/v4/latest/NGN")
-      .then(res => res.json())
-      .then(data => setRates(data.rates));
-  }, []);
+const Transportation = () => {
+  const vehicles = [
+    {
+      name: "Toyota Corolla (4-seater)",
+      image: "/vehicles/corolla.jpg"
+    },
+    {
+      name: "Toyota Sienna (7-seater)",
+      image: "/vehicles/sienna.jpg"
+    },
+    {
+      name: "Mercedes-Benz V-Class (7-seater Luxury)",
+      image: "/vehicles/vclass.jpg"
+    },
+    {
+      name: "Toyota Hiace (14-seater)",
+      image: "/vehicles/hiace.jpg"
+    }
+  ];
 
   return (
-    <div className="p-4 max-w-2xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4">Bureau de Change</h1>
-      {rates ? (
-        <ul className="space-y-1">
-          {['USD', 'EUR', 'GBP', 'CAD'].map(currency => (
-            <li key={currency}>
-              1 {currency} = {(1 / rates[currency]).toFixed(2)} NGN
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>Loading exchange rates...</p>
-      )}
+    <div className="p-6 max-w-6xl mx-auto">
+      <h1 className="text-3xl font-bold mb-6 text-center">Our Airport Transfer Fleet</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {vehicles.map((vehicle, index) => (
+          <div key={index} className="rounded-xl overflow-hidden shadow-lg bg-white">
+            <img src={vehicle.image} alt={vehicle.name} className="w-full h-56 object-cover" />
+            <div className="p-4">
+              <h2 className="text-lg font-semibold">{vehicle.name}</h2>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
@@ -142,15 +161,15 @@ export default function App() {
   const [page, setPage] = useState("booking");
 
   return (
-    <div className="min-h-screen">
-      <nav className="p-4 bg-gray-100 flex justify-center gap-4">
+    <div className="min-h-screen bg-gray-50">
+      <nav className="p-4 bg-white shadow flex justify-center gap-4">
         <button className="border px-4 py-2 rounded" onClick={() => setPage("booking")}>Booking</button>
         <button className="border px-4 py-2 rounded" onClick={() => setPage("info")}>Information</button>
-        <button className="border px-4 py-2 rounded" onClick={() => setPage("exchange")}>Bureau de Change</button>
+        <button className="border px-4 py-2 rounded" onClick={() => setPage("transport")}>Transportation</button>
       </nav>
       {page === "booking" && <Booking />}
       {page === "info" && <Info />}
-      {page === "exchange" && <BureauDeChange />}
+      {page === "transport" && <Transportation />}
     </div>
   );
 }
