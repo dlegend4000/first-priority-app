@@ -52,7 +52,7 @@ const Booking = () => {
             <input className="p-3 border rounded-md" name="email" placeholder="Email Address" type="email" onChange={handleChange} required />
             <input className="p-3 border rounded-md" name="flightNumber" placeholder="Flight Number" onChange={handleChange} required />
             <input className="p-3 border rounded-md" name="airline" placeholder="Airline" onChange={handleChange} required />
-            <input className="p-3 border rounded-md" name="arrivalTime" placeholder="Arrival Date & Time" type="datetime-local" onChange={handleChange} required />
+            <input className="p-3 border rounded-md" name="arrivalTime"$1 value={form.arrivalTime}></input>
             <input className="p-3 border rounded-md" name="airport" placeholder="Airport (e.g., Lagos)" onChange={handleChange} required />
             <button className="bg-black text-white py-3 px-6 rounded-md hover:bg-gray-800 transition" type="submit">
               Submit Booking
