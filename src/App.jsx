@@ -17,7 +17,7 @@ const Booking = () => {
     email: "",
     flightNumber: "",
     airline: "",
-    arrivalTime: "",
+    arrivalTime: new Date().toISOString().slice(0, 16),
     airport: "",
   });
   const [submitted, setSubmitted] = useState(false);
