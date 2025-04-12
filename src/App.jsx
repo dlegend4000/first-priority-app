@@ -65,78 +65,55 @@ const Booking = () => {
 };
 
 const Info = () => (
-  <div className="p-6 w-full space-y-14">
-    <img src="/fp.jpg" alt="First Priority Header" className="w-full rounded-2xl shadow-lg object-cover max-h-[450px]" />
+  <div className="p-6 w-full max-w-6xl mx-auto">
+    <h1 className="text-3xl font-bold mb-6">First Priority</h1>
+    <p className="mb-4">Get priority access at more than 1,000 airports within the First Priority team! With First Priority, you enjoy seamless service every step of the way — from check-in, baggage drop-off, and delivery, to security and boarding.</p>
 
-    <section className="grid md:grid-cols-2 gap-6 items-start">
+    <div className="grid md:grid-cols-2 gap-6 items-start mb-10">
       <div>
-        <p className="text-lg font-medium mb-4 text-gray-800">Fast-track Check-in and Immigration</p>
-        <p className="text-gray-700">Avoid the hassle of long queues and breeze through the airport like a VIP with our exclusive fast-track service. Designed for travelers who value efficiency, comfort, and exceptional service, this premium offering ensures a stress-free airport experience from start to finish. Whether you're jetting off on an international adventure or arriving at your destination after a long flight, our fast-track service allows you to bypass the usual delays and skip the crowds with confidence and ease.
-
-          From the moment you enter the terminal, our professional agents are there to greet you and personally escort you through every step of the process. You won’t have to worry about deciphering airport signs or navigating confusing corridors — we handle all the logistics, so you can simply relax. At check-in, we assist with your documents, baggage, and boarding passes, ensuring everything is handled swiftly and smoothly. Then, you’re guided directly to the priority lanes at immigration and security, where our team works to minimize wait times and help you clear formalities with remarkable speed.</p>
+        <h2 className="text-xl font-semibold mb-2">Fast, Priority Access at the Airport</h2>
+        <ul className="list-disc pl-5 space-y-1 text-gray-700">
+          <li>Baggage check-in and drop-off in dedicated areas</li>
+          <li>Priority line for security and immigration clearance (in some airports)</li>
+          <li>Dedicated line at ticket offices and transfer desks</li>
+          <li>Priority boarding or boarding at your leisure</li>
+          <li>Priority baggage delivery</li>
+        </ul>
+        <p className="mt-2 text-sm text-gray-600">First Priority signs are displayed throughout airports to guide you every step of your way.</p>
       </div>
-      <img src="/escort.jpg" alt="Check-in Service" className="rounded-xl shadow w-full h-48 object-cover md:h-64 lg:h-72 aspect-video" />
-    </section>
+      <img src="/fplogo.png" alt="FirstPriority Signage" className="rounded-lg shadow-md w-full h-auto object-cover" />
+    </div>
 
-    <section className="grid md:grid-cols-2 gap-6 items-start">
-      <img src="/officer.jpg" alt="Escort Service" className="rounded-xl shadow w-full h-48 object-cover md:h-64 lg:h-72 aspect-video" />
+    <div className="grid md:grid-cols-2 gap-6 items-start">
+      <img src="/Screenshot 2025-04-04 at 16.30.04.png" alt="FirstPriority Desk" className="rounded-lg shadow-md w-full h-auto object-cover" />
       <div>
-        <p className="text-lg font-medium mb-4 text-gray-800">Baggage Handling and Escort Service</p>
-        <p className="text-gray-700">Our professional staff are ready to assist you the moment you arrive, ensuring a smooth and stress-free transition through the airport. From lifting and managing heavy luggage to expertly navigating the often-busy baggage claim area, our dedicated team is there to take the burden off your shoulders — quite literally. You won’t need to search for carts or struggle with multiple bags; we handle it all with care and efficiency.
-
-          With our personalized escort service, you’ll never feel lost, rushed, or overwhelmed in unfamiliar surroundings. Our staff will guide you step by step, answering questions and making sure you feel confident and supported at every stage of the process. Whether you’re a first-time visitor unfamiliar with the airport layout or a seasoned traveler looking for a more comfortable experience, we tailor our service to meet your needs.</p>
+        <h2 className="text-xl font-semibold mb-2">An Exclusive Service</h2>
+        <ul className="list-disc pl-5 space-y-1 text-gray-700">
+          <li>First Priority Team Elite Plus members</li>
+          <li>Passengers in the La Première, Business, and Premium cabins</li>
+          <li>Passengers traveling with Flex tickets between France and Europe or North Africa</li>
+          <li>Passengers with a Discount Passholder fare</li>
+        </ul>
+        <p className="mt-2 text-sm text-gray-600">If eligible, your boarding pass will show the First Priority logo. Just follow the signs at the airport.</p>
       </div>
-    </section>
-
-    <section className="grid md:grid-cols-2 gap-6 items-start">
-      <div>
-        <p className="text-lg font-medium mb-4 text-gray-800">Meet and Greet</p>
-        <p className="text-gray-700">Upon your arrival, you'll be warmly greeted by one of our dedicated representatives, easily identifiable by a personalized sign bearing your name. This thoughtful touch is designed to make you feel recognized and at ease from the very first moment you step into the terminal. Our professional and friendly staff are not only there to welcome you but to ensure that your journey through the airport is as smooth and stress-free as possible.
-
-          From the moment you disembark, our team will be by your side to assist you every step of the way. Whether you're navigating through immigration, collecting your luggage, or finding your way to ground transportation, you can rely on our guidance and support. We understand that airports can be overwhelming, especially after a long flight, so our goal is to make the transition effortless and reassuring.
-
-          Our representatives are trained to anticipate your needs, offering assistance with forms, language translation if needed, or simply a friendly face to ease your travel fatigue.</p>
-      </div>
-      <img src="/meeting.jpg" alt="Meet and Greet" className="rounded-xl shadow w-full h-48 object-cover md:h-64 lg:h-72 aspect-video" />
-    </section>
-
-    <section className="grid md:grid-cols-2 gap-6 items-start">
-      <img src="/istockphoto.jpg" alt="Priority Boarding" className="rounded-xl shadow w-full h-48 object-cover md:h-64 lg:h-72 aspect-video" />
-      <div>
-        <p className="text-lg font-medium mb-4 text-gray-800">Priority Boarding and Transfers</p>
-        <p className="text-gray-700">We provide fast-lane boarding and seamless flight transition support, ensuring your travel experience is smooth, efficient, and free of unnecessary delays. Our dedicated team is on hand to guarantee that you receive priority access at boarding gates, allowing you to skip long lines and board your flight with ease and comfort. Whether you’re traveling for business or leisure, this service offers a premium level of convenience tailored to your schedule.
-
-          For those with connecting flights, tight layovers, or last-minute gate changes, our staff will coordinate every detail of your transfer. We assist with domestic or international connections, monitor your flight status, and make real-time adjustments when needed to help you stay on track. If delays or changes arise, we’re there to provide guidance, manage rebookings, and ensure your luggage is correctly transferred.</p>
-      </div>
-    </section>
-
-    <section className="grid md:grid-cols-2 gap-6 items-start">
-      <div>
-        <p className="text-lg font-medium mb-4 text-gray-800">WhatsApp Confirmation and Support</p>
-        <p className="text-gray-700">We simplify communication by using WhatsApp for confirmations, updates, and payment instructions. Our support team is responsive and available to assist before, during, and after your flight — giving you peace of mind and real-time updates when it matters most.</p>
-      </div>
-      <img src="/whatsapp.jpg" alt="WhatsApp Support" className="rounded-xl shadow w-full h-48 object-cover md:h-64 lg:h-72 aspect-video" />
-    </section>
+    </div>
   </div>
 );
+
 
 const Transportation = () => {
   const vehicles = [
     {
-      name: "Toyota Corolla (4-seater)",
-      image: "/vehicles/corolla.jpg"
+      name: "Mercedes-Benz S-Class (Luxury Sedan)",
+      image: "/sclass.jpg"
     },
     {
-      name: "Toyota Sienna (7-seater)",
-      image: "/vehicles/sienna.jpg"
+      name: "Mercedes-Benz E-Class (Executive Sedan)",
+      image: "/eclass.jpg"
     },
     {
-      name: "Mercedes-Benz V-Class (7-seater Luxury)",
-      image: "/vehicles/vclass.jpg"
-    },
-    {
-      name: "Toyota Hiace (14-seater)",
-      image: "/vehicles/hiace.jpg"
+      name: "Mercedes-Benz V-Class (7-seater Luxury Van)",
+      image: "/vclass.jpg"
     }
   ];
 
