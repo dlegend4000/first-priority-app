@@ -85,7 +85,7 @@ const Info = () => (
     </div>
 
     <div className="grid md:grid-cols-2 gap-6 items-start">
-      <img src="/reception.png" alt="FirstPriority Desk" className="rounded-lg shadow-md w-full h-auto object-cover" />
+      <img src="/reception2.png" alt="FirstPriority Desk" className="rounded-lg shadow-md w-full h-auto object-cover" />
       <div>
         <h2 className="text-xl font-semibold mb-2">An Exclusive Service</h2>
         <ul className="list-disc pl-5 space-y-1 text-gray-700">
