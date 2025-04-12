@@ -33,32 +33,46 @@ const Booking = () => {
   };
 
   return (
-    <div className="relative min-h-screen bg-cover bg-center flex flex-col md:flex-row items-center justify-between px-6 py-12" style={{ backgroundImage: "url('carplane.jpg')" }}>
-      <div className="text-white max-w-xl md:text-left text-center mb-10 md:mb-0">
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight">Introducing VIP Airport Services</h1>
-        <p className="text-lg mt-4 font-light">Skip the hassle. Enjoy personal assistance every step of the way.</p>
-      </div>
+    <div
+      className="relative min-h-screen bg-cover bg-center px-6 py-12"
+      style={{ backgroundImage: "url('carplane.jpg')" }}
+    >
+      {/* Mobile-only dark overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-60 md:hidden z-0" />
 
-      <div className="bg-white bg-opacity-90 p-6 rounded-2xl shadow-xl w-full max-w-xl">
-        <h1 className="text-xl font-semibold mb-4 text-gray-800">Book First Priority Service</h1>
-        {submitted ? (
-          <div className="text-green-600">
-            Thank you! You will be contacted on WhatsApp for confirmation and payment.
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="grid gap-4">
-            <input className="p-3 border rounded-md" name="name" placeholder="Full Name" onChange={handleChange} required />
-            <input className="p-3 border rounded-md" name="phone" placeholder="Phone Number" onChange={handleChange} required />
-            <input className="p-3 border rounded-md" name="email" placeholder="Email Address" type="email" onChange={handleChange} required />
-            <input className="p-3 border rounded-md" name="flightNumber" placeholder="Flight Number" onChange={handleChange} required />
-            <input className="p-3 border rounded-md" name="airline" placeholder="Airline" onChange={handleChange} required />
-            <input className="p-3 border rounded-md" name="arrivalTime"$1 value={form.arrivalTime}></input>
-            <input className="p-3 border rounded-md" name="airport" placeholder="Airport (e.g., Lagos)" onChange={handleChange} required />
-            <button className="bg-black text-white py-3 px-6 rounded-md hover:bg-gray-800 transition" type="submit">
-              Submit Booking
-            </button>
-          </form>
-        )}
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between h-full">
+        <div className="text-white max-w-xl text-center md:text-left mb-10 md:mb-0 md:mt-80">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug">
+            Introducing VIP Airport Services
+          </h1>
+          <p className="text-base sm:text-lg mt-4 font-light">
+            Skip the hassle. Enjoy personal assistance every step of the way.
+          </p>
+        </div>
+
+        <div className="bg-white bg-opacity-90 p-6 rounded-2xl shadow-xl w-full max-w-xl mt-8 md:mt-0">
+          <h1 className="text-xl font-semibold mb-4 text-gray-800">
+            Book First Priority Service
+          </h1>
+          {submitted ? (
+            <div className="text-green-600">
+              Thank you! You will be contacted on WhatsApp for confirmation and payment.
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="grid gap-4">
+              <input className="w-full p-3 border rounded-md" name="name" placeholder="Full Name" onChange={handleChange} required />
+              <input className="w-full p-3 border rounded-md" name="phone" placeholder="Phone Number" onChange={handleChange} required />
+              <input className="w-full p-3 border rounded-md" name="email" placeholder="Email Address" type="email" onChange={handleChange} required />
+              <input className="w-full p-3 border rounded-md" name="flightNumber" placeholder="Flight Number" onChange={handleChange} required />
+              <input className="w-full p-3 border rounded-md" name="airline" placeholder="Airline" onChange={handleChange} required />
+              <input className="w-full p-3 border rounded-md" type="datetime-local" name="arrivalTime" value={form.arrivalTime} onChange={handleChange} required />
+              <input className="w-full p-3 border rounded-md" name="airport" placeholder="Airport (e.g., Lagos)" onChange={handleChange} required />
+              <button className="bg-black text-white py-3 px-6 rounded-md hover:bg-gray-800 transition" type="submit">
+                Submit Booking
+              </button>
+            </form>
+          )}
+        </div>
       </div>
     </div>
   );
