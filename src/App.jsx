@@ -41,7 +41,7 @@ const Booking = () => {
       <div className="absolute inset-0 bg-black bg-opacity-60 md:hidden z-0" />
 
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-between h-full">
-        <div className="text-white max-w-xl text-center md:text-left mb-10 md:mb-0 md:mt-80">
+        <div className="text-white max-w-xl text-center md:text-left mb-10 md:mb-0 md:mt-20">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug">
             Introducing VIP Airport Services
           </h1>
@@ -50,7 +50,7 @@ const Booking = () => {
           </p>
         </div>
 
-        <div className="bg-white bg-opacity-90 p-6 rounded-2xl shadow-xl w-full max-w-xl mt-8 md:mt-0">
+        <div className="bg-white bg-opacity-90 p-6 rounded-2xl shadow-xl w-full max-w-xl mt-8 md:mt-0 md:mt-80">
           <h1 className="text-xl font-semibold mb-4 text-gray-800">
             Book First Priority Service
           </h1>
